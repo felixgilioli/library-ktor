@@ -1,7 +1,7 @@
 package felixgilioli.com.br
 
-import felixgilioli.com.br.plugins.authorModule
-import felixgilioli.com.br.plugins.configureRouting
+import felixgilioli.com.br.routing.authorModule
+import felixgilioli.com.br.routing.configureRouting
 import io.ktor.application.*
 import io.ktor.features.*
 import io.ktor.serialization.*

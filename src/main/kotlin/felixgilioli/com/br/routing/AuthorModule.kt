@@ -1,4 +1,4 @@
-package felixgilioli.com.br.plugins
+package felixgilioli.com.br.routing
 
 import io.ktor.application.*
 import io.ktor.request.*
@@ -10,13 +10,16 @@ fun Application.authorModule() {
 
     routing {
         get("/author") {
-            call.respondText("author doaskpdas")
+            val author1 = Author(1,"Felix", "Gilioli")
+            val author2 = Author(2,"Daiane", "Bellon")
+            call.respond(listOf(author1, author2))
         }
 
         get("/author/{id}") {
             val authorId = call.parameters["id"]
             println("the id of author is: $authorId")
-            call.respondText("ok")
+            val author = Author(authorId?.toLong(),"Felix", "Gilioli")
+            call.respond(author)
         }
 
         post("/author") {
@@ -29,6 +32,7 @@ fun Application.authorModule() {
 
 @Serializable
 data class Author(
+    val id: Long? = null,
     val firstName: String,
     val lastName: String
 )

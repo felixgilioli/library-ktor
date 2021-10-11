@@ -1,10 +1,8 @@
-package felixgilioli.com.br.plugins
+package felixgilioli.com.br.routing
 
 import io.ktor.routing.*
-import io.ktor.http.*
 import io.ktor.application.*
 import io.ktor.response.*
-import io.ktor.request.*
 
 fun Application.configureRouting() {
 
