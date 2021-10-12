@@ -1,4 +1,4 @@
-package felixgilioli.com.br.entity
+package felixgilioli.com.br.author
 
 import org.ktorm.schema.Table
 import org.ktorm.schema.int
